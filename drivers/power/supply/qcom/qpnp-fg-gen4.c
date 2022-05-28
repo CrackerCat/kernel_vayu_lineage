@@ -5224,6 +5224,8 @@ static int fg_psy_get_property(struct power_supply *psy,
 	case POWER_SUPPLY_PROP_KI_COEFF_CURRENT:
 		pval->intval = chip->dt.ffc_ki_coeff_med_hi_chg_thr_ma;
 		break;
+	case POWER_SUPPLY_PROP_TYPEC_MODE:
+		return -ENODATA;
 #endif
 	default:
 		pr_err("unsupported property %d\n", psp);
